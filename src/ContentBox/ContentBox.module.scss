@@ -1,0 +1,29 @@
+.wrapper{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+	background-image: linear-gradient(to right, #4b0b67, #540e62);
+}
+
+
+.overlay {
+	opacity: 1;
+	pointer-events: none;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 2rem;
+	height: 2rem;
+	background-color: #fff;
+	z-index: 7;
+	border-radius: 100%;
+	transition: all 1.2s;
+	transition-timing-function: cubic-bezier(0.625, -0.435, 0.445, 1.48);
+	transform: scale(80);
+	background-image: radial-gradient(
+		#540e62, #ff206b
+	);
+}

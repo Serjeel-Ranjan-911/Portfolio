@@ -1,0 +1,98 @@
+.wrapperFull {
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 1;
+	right: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	transition: all 2s;
+	overflow: hidden;
+	background-image: linear-gradient(to right, #4b0b67, #540e62);
+	border: 10px solid rgba(255, 7, 7, 0);
+}
+
+.main {
+	position: relative;
+	width: 95%;
+	height: 95%;
+	box-shadow: 0 0 10px #ff206b;
+	overflow-x: hidden;
+	overflow-y: scroll;
+
+	&::-webkit-scrollbar {
+		width: 0.5em;
+	}
+
+	&::-webkit-scrollbar-track {
+		box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+	}
+
+	&::-webkit-scrollbar-thumb {
+		background-color: #a620ff;
+	}
+}
+
+.hiddenText {
+	position: absolute;
+	top: 20%;
+	left: 55%;
+	transform: translate(-50%, -50%) rotate(-15deg);
+	font-family: Kaushan;
+	margin-top: 4.5rem;
+	font-size: 7.5rem;
+	letter-spacing: 3rem;
+	background-image: linear-gradient(to right, #4b0b67, #540e62);
+	background-clip: text;
+	color: transparent;
+	user-select: none;
+}
+
+.bubble {
+	width: 20rem;
+	height: 20rem;
+	filter: blur(4rem);
+	background-image: radial-gradient(#ff206b, #a620ff);
+	border-radius: 100px;
+	position: absolute;
+}
+
+.title {
+	font-family: 'Sacramento';
+	color: #ff206b;
+    font-size: 6rem;
+	letter-spacing: 0rem;
+	padding: 1rem;
+	margin: 1rem;
+	z-index: 6;
+	transform: skew(-25deg);
+	text-align: center;
+}
+
+///////////////////////styles for timeline///////////////////
+
+.timelineItem {
+	padding: 1.5rem;
+	color: #fff;
+	font-family: OpenSansExtraBold;
+	font-size: 1.2rem;
+	border: 3px solid rgb(255, 255, 255);
+	box-shadow: 0 1.5rem 2rem rgba(0, 0, 0, 0.575),
+		inset 0 1.5rem 2rem rgba(0, 0, 0, 0.575);
+	text-shadow: 0 2rem 1.5rem rgba(0, 0, 0, 0.575);
+	text-align: center;
+}
+
+.timelineDate{
+	text-align: left;
+}
+
+.timelineHeading{
+	color: #ff206b;
+}
+
+.timelineText{
+	font-family: LatoItalic;
+}
