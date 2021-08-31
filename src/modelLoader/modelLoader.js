@@ -31,9 +31,6 @@ const invisibleObjects = [
 let tone = 2;
 let background = 0x000000;
 
-
-  
-
 const ModelLoader = (props) => {
 	const raycaster = new THREE.Raycaster();
 	const mouse = new THREE.Vector2(); //vector to store mouse position
@@ -84,34 +81,34 @@ const ModelLoader = (props) => {
 	);
 
 	const [dayTime, setDayTime] = useState(props.dayTime);
-	const [currentScene,setCurrentScene] = useState(NightScene);
-	
+	const [currentScene, setCurrentScene] = useState(NightScene);
+
 	const hoverRefernce = useRef(null); //to position the tag
 	const hoverNameRef = useRef(null); //to change text inside tag
 
 	const [rightComponent, setRightComponent] = useState('Profile');
 
-	useEffect(()=>{
-		setDayTime(props.dayTime)
-		console.log("dayTime is = "+ dayTime)
+	useEffect(() => {
+		setDayTime(props.dayTime);
+		console.log('dayTime is = ' + dayTime);
 
 		//selecting corrent model
 		if (props.dayTime === 0) {
-			setCurrentScene(MorningScene)
-			background = 0xfff8cc;
-			tone = 1.5;
+			setCurrentScene(MorningScene);
+			background = 0xb5b4ae;
+			tone = 1.3;
 		} else if (props.dayTime === 3) {
-			setCurrentScene(NightScene)
+			setCurrentScene(NightScene);
 		}
-	},[dayTime, props.dayTime])
+	}, [dayTime, props.dayTime]);
 
 	useEffect(() => {
 		//time not decided yet
-		if(dayTime === -1){
+		if (dayTime === -1) {
 			return;
 		}
 		//scene
-		const scene = new THREE.Scene()
+		const scene = new THREE.Scene();
 		scene.background = new THREE.Color(background);
 		scene.fog = new THREE.FogExp2(background, 0.04);
 		// scene.fog = new THREE.Fog('#fff', 5, 30);
@@ -160,9 +157,9 @@ const ModelLoader = (props) => {
 			// console.log('model loaded');
 
 			mixer = new THREE.AnimationMixer(models.scene);
-			
+
 			if (mixer) {
-					models.animations.forEach((animation) => {
+				models.animations.forEach((animation) => {
 					animation.timeScale = 3;
 					mixer.clipAction(animation).reset().play();
 				});
@@ -172,10 +169,22 @@ const ModelLoader = (props) => {
 			const children = [...models.scene.children];
 			for (const child of children) {
 				// console.log(child.name);
-				// child.scale.set(0, 0, 0);
 				scene.add(child);
 				if (invisibleObjects.includes(child.name)) child.visible = false;
 			}
+
+			//rotate the needle of clock to proper time
+			const setClock = () => {
+				// scene.getObjectByName('Minute').rotation.z = 0;
+				scene
+					.getObjectByName('Minute')
+					.rotateZ((new Date().getMinutes() * Math.PI) / -30);
+
+				const hour = new Date().getHours() + new Date().getMinutes() / 60;
+				// scene.getObjectByName('Hour').rotation.z = 0;
+				scene.getObjectByName('Hour').rotateZ((hour * Math.PI) / -6);
+			};
+			setClock();
 
 			props.loadingOver();
 		});
@@ -189,13 +198,15 @@ const ModelLoader = (props) => {
 
 			if (intersects.length > 0) {
 				hoverNameRef.current.innerHTML = intersects[0].object.name;
-				//custom style if the object is clickable 
-				if(hoverNameRef.current && pages.includes(hoverNameRef.current.innerHTML)){
+				//custom style if the object is clickable
+				if (
+					hoverNameRef.current &&
+					pages.includes(hoverNameRef.current.innerHTML)
+				) {
 					hoverNameRef.current.style.background = '#56670b60';
 					hoverNameRef.current.style.color = '#f3f3bc';
 					hoverNameRef.current.style.fontSize = '2rem';
-				}
-				else{
+				} else {
 					hoverNameRef.current.style.background = '';
 					hoverNameRef.current.style.color = '#e3bcf3';
 					hoverNameRef.current.style.fontSize = '1.5rem';
