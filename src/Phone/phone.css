@@ -1,0 +1,139 @@
+.phoneEnterWindow{
+	background: linear-gradient(45deg, #210d11, #0a0c1f);
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.phoneContainer {
+	background: lightblue;
+	position: fixed;
+	overflow: hidden;
+	width: 100%;
+	height: 100%;
+}
+
+.cardContainer {
+	position: absolute;
+	width: 100vw;
+	height: 100vh;
+	will-change: transform;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.card {
+	background-color: white;
+	background-size: auto 85%;
+	background-repeat: no-repeat;
+	background-position: center center;
+	width: 45vh;
+	max-width: 300px;
+	height: 85vh;
+	max-height: 570px;
+	will-change: transform;
+	border-radius: 10px;
+	box-shadow: 0 12.5px 100px -10px rgba(50, 50, 73, 0.4),
+		0 10px 10px -10px rgba(50, 50, 73, 0.3);
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+/* for button */
+:root {
+	--buttonColor: #ff1eff;
+  }
+
+.EnterButton{
+	font-family: OpenSansBold;
+	font-size: 3rem;
+	position: relative;
+    display: inline-block;
+    padding: 25px 30px;
+    margin: 40px 0;
+    color: var(--buttonColor);
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.5s;
+    letter-spacing: 4px;
+    overflow: hidden;
+}
+
+.EnterButton span{
+    position: absolute;
+    display: block;
+}
+.EnterButton span:nth-child(1){
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg,transparent,var(--buttonColor));
+    animation: animate1 1s linear infinite;
+}
+@keyframes animate1{
+    0%{
+        left: -100%;
+    }
+    50%,100%{
+        left: 100%;
+    }
+}
+.EnterButton span:nth-child(2){
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg,transparent,var(--buttonColor));
+    animation: animate2 1s linear infinite;
+    animation-delay: 0.25s;
+}
+@keyframes animate2{
+    0%{
+        top: -100%;
+    }
+    50%,100%{
+        top: 100%;
+    }
+}
+.EnterButton span:nth-child(3){
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg,transparent,var(--buttonColor));
+    animation: animate3 1s linear infinite;
+    animation-delay: 0.50s;
+}
+@keyframes animate3{
+    0%{
+        right: -100%;
+    }
+    50%,100%{
+        right: 100%;
+    }
+}
+
+
+.EnterButton span:nth-child(4){
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg,transparent,var(--buttonColor));
+    animation: animate4 1s linear infinite;
+    animation-delay: 0.75s;
+}
+@keyframes animate4{
+    0%{
+        bottom: -100%;
+    }
+    50%,100%{
+        bottom: 100%;
+    }
+}

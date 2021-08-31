@@ -2,15 +2,16 @@ import './App.css';
 import './Typography.css';
 
 import ModelLoader from './modelLoader/modelLoader';
+import Phone from './Phone/phone';
 
 import Dog from './dog/dog';
 import { isMobile, isTablet } from 'react-device-detect';
 import { useEffect, useState } from 'react';
 
 function App() {
-	const [mobile, setMobile] = useState(isMobile);
 	const [opacity, setOpacity] = useState(0);
 	const [spawnDog, setSpawnDog] = useState(false);
+	const [phoneMode, setPhoneMode] = useState(false);
 	const [dayTime, setDayTime] = useState(-1);
 
 	const loadingOver = () => {
@@ -19,9 +20,9 @@ function App() {
 			doc.style.opacity = 0;
 			setTimeout(() => {
 				try {
-					doc.parentNode.removeChild(doc);
 					setOpacity(1);
 					setSpawnDog(true);
+					doc.parentNode.removeChild(doc);
 				} catch (error) {}
 			}, 4000);
 		}
@@ -76,17 +77,16 @@ function App() {
 		}, 10000);
 	}, []);
 
-	// useEffect(() => {
-	// 	if (mobile) {
-	// 		var el = document.body;
-	// 		var requestMethod =
-	// 			el.requestFullScreen ||
-	// 			el.webkitRequestFullScreen ||
-	// 			el.mozRequestFullScreen ||
-	// 			el.msRequestFullScreen;
-	// 		requestMethod.call(el);
-	// 	}
-	// }, []);
+	const enterPhoneMode = () => {
+		var el = document.body;
+		var requestMethod =
+			el.requestFullScreen ||
+			el.webkitRequestFullScreen ||
+			el.mozRequestFullScreen ||
+			el.msRequestFullScreen;
+		requestMethod.call(el);
+		setPhoneMode(true);
+	};
 
 	return (
 		<>
@@ -98,13 +98,36 @@ function App() {
 				}}
 				className="App"
 			>
-				{spawnDog ? <Dog dayTime={dayTime} /> : null}
+				{isMobile || isTablet ? (
+					<>
+						{loadingOver()}
+						{!phoneMode ? (
+							<div className="phoneEnterWindow">
+								<div className="EnterButton" onClick={enterPhoneMode}>
+									<span></span>
+									<span></span>
+									<span></span>
+									<span></span>
+									ENTER
+								</div>
+							</div>
+						) : (
+							<div className="phoneContainer">
+								<Phone />
+							</div>
+						)}
+					</>
+				) : (
+					<>
+						{spawnDog ? <Dog dayTime={dayTime} /> : null}
 
-				<ModelLoader
-					mobile={mobile}
-					loadingOver={loadingOver}
-					dayTime={dayTime}
-				/>
+						<ModelLoader
+							mobile={isMobile}
+							loadingOver={loadingOver}
+							dayTime={dayTime}
+						/>
+					</>
+				)}
 			</div>
 		</>
 	);
