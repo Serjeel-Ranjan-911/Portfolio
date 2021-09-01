@@ -32,17 +32,17 @@ const divide = (e) => {
 	e.stopPropagation();
 };
 
-anime({
-	targets: document.querySelectorAll('[id^="spawn"]'),
-	scale: {
-		value: [0, 1],
-		duration: 1000,
-		easing: 'easeOutBounce',
-	},
-	duration: 3000,
-	// delay: anime.stagger(300),
-	delay: 300
-});
+// anime({
+// 	targets: document.querySelectorAll('[id^="spawn"]'),
+// 	scale: {
+// 		value: [0, 1],
+// 		duration: 1000,
+// 		easing: 'easeOutBounce',
+// 	},
+// 	duration: 3000,
+// 	// delay: anime.stagger(300),
+// 	delay: 300
+// });
 
 document.getElementById('spawn1').addEventListener('click', divide);
 document.getElementById('spawn2').addEventListener('click', divide);

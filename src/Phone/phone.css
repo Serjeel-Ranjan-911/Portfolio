@@ -8,7 +8,7 @@
 }
 
 .phoneContainer {
-	background: lightblue;
+	background: rgb(245, 180, 223);
 	position: fixed;
 	overflow: hidden;
 	width: 100%;
@@ -50,9 +50,11 @@
   }
 
 .EnterButton{
-	font-family: OpenSansBold;
+	font-family: Kaushan;
 	font-size: 3rem;
 	position: relative;
+    background-color: transparent;
+    border: none;
     display: inline-block;
     padding: 25px 30px;
     margin: 40px 0;
@@ -62,12 +64,21 @@
     transition: 0.5s;
     letter-spacing: 4px;
     overflow: hidden;
+    background-color: #ff00ff12;
+    box-shadow: 0px 0px 10px 6px #d63ed9;
+    transition: all .1s;
+}
+
+.EnterButton:active{
+    box-shadow: 0px 0px 5px 3px #d63ed9;
+    font-size: 2.9rem;
 }
 
 .EnterButton span{
     position: absolute;
     display: block;
 }
+
 .EnterButton span:nth-child(1){
     top: 0;
     left: 0;

@@ -185,19 +185,13 @@ html {
 
 .box {
 	z-index: inherit;
-	/* background: rgba(255, 255, 255, 0.2);
-	box-shadow: 0 4px 16px 0 rgb(255 0 85 / 27%);
-	backdrop-filter: blur(3.5px);
-	-webkit-backdrop-filter: blur(3.5px);
-	border-radius: 1rem;
-	border: 1px solid rgba(255, 255, 255, 0.18); */
 
 	position: absolute;
 	bottom: 0;
 	left: 50%;
 	transform: translate(-50%, -50%);
 
-	padding: 2rem;
+	padding: 1rem;
 	pointer-events: none;
 
 	display: flex;

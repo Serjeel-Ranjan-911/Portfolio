@@ -100,16 +100,16 @@ function App() {
 			>
 				{isMobile || isTablet ? (
 					<>
-						{loadingOver()}
+						{function (){setTimeout(loadingOver,3000)}()}
 						{!phoneMode ? (
 							<div className="phoneEnterWindow">
-								<div className="EnterButton" onClick={enterPhoneMode}>
+								<button className="EnterButton" onClick={enterPhoneMode}>
 									<span></span>
 									<span></span>
 									<span></span>
 									<span></span>
 									ENTER
-								</div>
+								</button>
 							</div>
 						) : (
 							<div className="phoneContainer">
