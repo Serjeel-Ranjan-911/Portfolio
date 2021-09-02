@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useSprings, animated, interpolate } from 'react-spring';
 import { useGesture } from 'react-use-gesture';
-import cards from "./cards.js";
+import cards from './cards.js';
 import './phone.css';
 
 const to = (i) => ({
@@ -22,15 +22,10 @@ const Phone = () => {
 	const [props, set] = useSprings(cards.length, (i) => ({
 		...to(i),
 		from: from(i),
+		delay: 2000,
 	}));
 	const bind = useGesture(
-		({
-			args: [index],
-			down,
-			delta: [xDelta],
-			direction: [xDir],
-			velocity,
-		}) => {
+		({ args: [index], down, delta: [xDelta], direction: [xDir], velocity }) => {
 			const trigger = velocity > 0.2;
 			const dir = xDir < 0 ? -1 : 1;
 			if (!down && trigger) gone.add(index);

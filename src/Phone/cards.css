@@ -20,7 +20,7 @@
 	top: 2.5rem;
 	right: 2.5rem;
 	width: 75%;
-	height: 3px;
+	height: 2px;
 	background: var(--borderColor);
 }
 
@@ -30,7 +30,7 @@
 	bottom: 2.5rem;
 	left: 2.5rem;
 	width: 75%;
-	height: 3px;
+	height: 2px;
 	background: var(--borderColor);
 }
 
@@ -39,7 +39,7 @@
 	display: block;
 	bottom: 2.5rem;
 	left: 2.5rem;
-	width: 3px;
+	width: 2px;
 	height: 50%;
 	background: var(--borderColor);
 }
@@ -49,7 +49,7 @@
 	display: block;
 	top: 2.5rem;
 	right: 2.5rem;
-	width: 3px;
+	width: 2px;
 	height: 50%;
 	background: var(--borderColor);
 }
@@ -163,7 +163,36 @@
 	margin: 10px 0;
 }
 
+
 /**************queries***********/
+
+/*portrait*/
+
+@media screen and (orientation: portrait) and (max-device-height: 700px) {
+	html {
+		font-size: 60%;
+	}
+
+	.skillLogo {
+		width: 3rem;
+		margin-right: 0.5rem;
+	}
+}
+
+@media screen and (orientation: portrait) and (max-device-height: 600px) {
+	html {
+		font-size: 50%;
+	}
+
+	.skillLogo {
+		width: 3rem;
+		margin-right: 0.5rem;
+	}
+}
+
+
+
+/*landscape*/
 
 @media screen and (orientation: landscape) and (max-device-height: 600px) {
 	html {
@@ -175,4 +204,19 @@
 		margin-right: 0.5rem;
 	}
 }
+
+
+@media screen and (orientation: landscape) and (max-device-height: 350px) {
+	html {
+		font-size: 30%;
+	}
+
+	.skillLogo {
+		width: 2.3rem;
+	}
+}
+
+
+
+
 

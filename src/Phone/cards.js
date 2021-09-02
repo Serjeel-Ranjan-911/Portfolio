@@ -1,5 +1,6 @@
 import './cards.css';
-import character from './img/halloweenCharacter.jpg';
+import style from "./profile.module.scss"
+import character from './img/character.png';
 import react from './img/react.png';
 import mongo from './img/mongo.jpg';
 import express from './img/express.png';
@@ -27,7 +28,7 @@ const cards = [
 			<br/>
 			<h3>This is not the end.</h3>
 			<br/>
-			<h3>Visit this site on <div className="boldText" style={{fontSize: "3rem"}}>Desktop /PC</div> for a <div className="boldText" style={{fontSize: "3rem"}}>UNIQUE</div> experience!</h3>
+			<h3>Visit this site on <div className="boldText" style={{fontSize: "3rem"}}>Desktop/PC</div> for a <div className="boldText" style={{fontSize: "3rem"}}>UNIQUE</div> experience!</h3>
 		</div>
 
 		<div className="textBox">
@@ -66,11 +67,11 @@ const cards = [
 		<h2 className="cardTitleBottom">WORK</h2>
 
 		<div className="textBoxTop">
-			<h2>I like to contribute to <div className="boldText" style={{fontSize: "3rem"}}>Open Source</div> Projects.</h2> 
+			<h2>- I like to contribute to <div className="boldText" style={{fontSize: "3rem"}}>Open Source</div> Projects.</h2> 
 			<br/>
 			<h2>Check my &#10142; <a target="_blank"  rel="noopener noreferrer" href="https://github.com/Serjeel-Ranjan-911"><img style={{transform: "translate(0,1rem)"}} className="skillLogo" src={github} alt="my gihub" /></a></h2> 
 			<br/>
-			<h2>Plus I have done some <div className="boldText" style={{fontSize: "3rem"}}>Freelance</div> Projects &#10142;  <a target="_blank"  rel="noopener noreferrer" href="https://eqixs.org/"><img style={{transform: "translate(0,10px)"}} className="skillLogo" src={eqixs} alt="Eqixs" /></a></h2>
+			<h2>- Plus I have done some <div className="boldText" style={{fontSize: "3rem"}}>Freelance</div> Projects &#10142;  <a target="_blank"  rel="noopener noreferrer" href="https://eqixs.org/"><img style={{transform: "translate(0,10px)"}} className="skillLogo" src={eqixs} alt="Eqixs" /></a></h2>
 		</div>
 
 		<div className="textBox">
@@ -153,8 +154,8 @@ const cards = [
 		
 
 		<div className="textBox">
-			- I write good <div className="boldText">Documentation</div>. <br/>
-			- Adaptive to new <div className="boldText">Tech</div>. <br/>
+			- I adapt to new <div className="boldText">Tech</div> <br/>
+			- and write good <div className="boldText">Documentation</div> <br/>
 		</div>
 	</div>,
 	<div className="cardContentBox">
@@ -166,6 +167,17 @@ const cards = [
 		<h2 className="cardTitleBottom">SERJEEL</h2>
 
 		<div className="imageContainer">
+			<div style={{position:"absolute",top: "48%",left: "50%",transform: "translate(-50%,0)"}}>
+
+				<div className={style['eyes']}>
+					<div className={style['eye-left']}>
+						<div className={style['pupil']} />
+					</div>
+					<div className={style['eye-right']}>
+						<div className={style['pupil']} />
+					</div>
+				</div>
+			</div>
 			<img src={character} alt="profile" />
 		</div>
 

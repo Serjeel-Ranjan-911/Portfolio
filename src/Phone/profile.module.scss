@@ -1,0 +1,166 @@
+
+// $pupilColor: #280441;
+$pupilColor: #68163f;
+
+$speed: 24s;
+
+.eyes {
+    width: 6rem;
+    height: auto;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    .eye-left,
+    .eye-right {
+        width: 2.8rem;
+        height: 2.8rem;
+        border-radius: 50%;
+        background-color: #fff;
+        transform-origin: center top;
+        animation: eyeWink $speed linear infinite;
+        .pupil {
+            background-color: $pupilColor;
+            border-radius: 50%;
+            width: 76%;
+            height: 76%;
+            animation: eyeMove $speed linear infinite;
+            &:after {
+                content: "";
+                position: absolute;
+                display: inline-block;
+                background-color: #fff;
+                border-radius: 50%;
+                width: 1rem;
+                height: 1rem;
+                top: 8%;
+                left: 8%;
+                transform-origin: center bottom;
+                animation: eyeWink2 $speed linear infinite;
+            }
+        }
+    }
+    .eye-left {
+        left: .4rem;
+    }
+    .eye-right {
+        right: .4rem;
+    }
+}
+
+@keyframes eyeMove {
+    0%,
+    10.4%,
+    14%,
+    18.4%,
+    25.2%,
+    30.4%,
+    37.6%,
+    51.2%,
+    57.2%,
+    66.8%,
+    71.2%,
+    74.8%,
+    81.6%,
+    86.8%,
+    96% {
+        transform: translate(0px, 0px) rotate(0deg) scale(1);
+    }
+    10.8%,
+    13.6%,
+    67.2%,
+    70.4% {
+        transform: translate(0px, -2px);
+    }
+    18.8%,
+    24.8%,
+    30.8%,
+    37%,
+    75.2%,
+    81.2%,
+    87.2%,
+    94% {
+        transform: translate(2px, 0px) rotate(2deg);
+    }
+    51.6%,
+    56.8% {
+        transform: scale(1.1);
+    }
+}
+@keyframes eyeWink {
+    0%,
+    8.4%,
+    10.8%,
+    13.2%,
+    16.4%,
+    36.4%,
+    42%,
+    52%,
+    56.4%,
+    64.4%,
+    67.2%,
+    69.2%,
+    72.8%,
+    93.2%,
+    98% {
+        width:2.8rem;
+        height:2.8rem;
+        border-radius: 50%;
+        background-color: #fff;
+        top: 0;
+    }
+    8.8%,
+    9.6%,
+    14.8%,
+    15.2%,
+    36.7%,
+    40.4%,
+    53.2%,
+    54.8%,
+    65.2%,
+    66.2%,
+    71%,
+    72%,
+    94%,
+    96.8% {
+        height: 3px;
+        width: 2.5rem;
+        border-radius: 2px;
+        background-color: $pupilColor;
+        top: 35%;
+    }
+}
+@keyframes eyeWink2 {
+    0%,
+    8%,
+    10.4%,
+    12.8%,
+    16%,
+    36%,
+    41.6%,
+    51.6%,
+    56%,
+    64%,
+    66.8%,
+    68.8%,
+    72.4%,
+    92.8%,
+    97.6% {
+        opacity: 1;
+    }
+    8.4%,
+    9.6%,
+    14.4%,
+    15.2%,
+    36.7%,
+    40.4%,
+    53.2%,
+    54.8%,
+    65.2%,
+    66.2%,
+    71%,
+    72%,
+    94%,
+    96.8% {
+        opacity: 0;
+    }
+}
