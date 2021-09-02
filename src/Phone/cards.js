@@ -48,11 +48,11 @@ const cards = [
 			<br/>
 
 			<div style={{display: "flex", justifyContent: "flex-start", alignItems: "center",margin: "3rem"}} onClick={()=>window.open("https://mail.google.com/mail/?view=cm&fs=1&to=serjeelranjan@gmail.com&su=SUBJECT&body=BODY&bcc=serjeelranjan@gmail")}>
-				<img src={gmail} alt="gmail" />
+				<img className="skillLogo" src={gmail} alt="gmail" />
 				<h2 style={{marginLeft:"1rem"}}>Gmail</h2>
 			</div>
 			<div style={{display: "flex", justifyContent: "flex-start", alignItems: "center",margin: "3rem"}} onClick={()=>window.open('https://linkedin.com/in/serjeel-ranjan-0331b31ab', '_blank')}>
-				<img src={linkedin} alt="linkedin" />
+				<img className="skillLogo" src={linkedin} alt="linkedin" />
 				<h2 style={{marginLeft:"1rem"}}>LinkedIn</h2>
 			</div>
 		</div>
@@ -68,7 +68,7 @@ const cards = [
 		<div className="textBoxTop">
 			<h2>I like to contribute to <div className="boldText" style={{fontSize: "3rem"}}>Open Source</div> Projects.</h2> 
 			<br/>
-			<h2>Check my &#10142; <a target="_blank"  rel="noopener noreferrer" href="https://github.com/Serjeel-Ranjan-911"><img style={{transform: "translate(0,10px)"}} className="skillLogo" src={github} alt="my gihub" /></a></h2> 
+			<h2>Check my &#10142; <a target="_blank"  rel="noopener noreferrer" href="https://github.com/Serjeel-Ranjan-911"><img style={{transform: "translate(0,1rem)"}} className="skillLogo" src={github} alt="my gihub" /></a></h2> 
 			<br/>
 			<h2>Plus I have done some <div className="boldText" style={{fontSize: "3rem"}}>Freelance</div> Projects &#10142;  <a target="_blank"  rel="noopener noreferrer" href="https://eqixs.org/"><img style={{transform: "translate(0,10px)"}} className="skillLogo" src={eqixs} alt="Eqixs" /></a></h2>
 		</div>

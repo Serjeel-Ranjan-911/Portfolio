@@ -132,31 +132,31 @@ html {
 }
 
 .triangle {
-	width: 3rem;
-	height: 3rem;
+	width: 30px;
+	height: 30px;
 	clip-path: polygon(0% 87%, 50% 0%, 50% 0%, 100% 87%);
 }
 
 .square {
-	width: 4rem;
-	height: 4rem;
+	width: 40px;
+	height: 40px;
 }
 
 .pentagon {
-	width: 5rem;
-	height: 5rem;
+	width: 50px;
+	height: 50px;
 	clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
 }
 
 .hexagon {
-	width: 6rem;
-	height: 6rem;
+	width: 60px;
+	height: 60px;
 	clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
 }
 
 .heptagon {
-	width: 7rem;
-	height: 7rem;
+	width: 70px;
+	height: 70px;
 	clip-path: polygon(
 		50% 0%,
 		90% 20%,
@@ -169,8 +169,8 @@ html {
 }
 
 .octagon {
-	width: 9rem;
-	height: 9rem;
+	width: 90px;
+	height: 90px;
 	clip-path: polygon(
 		30% 0%,
 		70% 0%,
