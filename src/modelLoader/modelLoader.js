@@ -116,7 +116,7 @@ const ModelLoader = (props) => {
 
 		//camera
 
-		camera.position.set(5, 5, 5);
+		camera.position.set(5, 3.2, 0);
 		scene.add(camera);
 
 		//renderer
@@ -149,7 +149,7 @@ const ModelLoader = (props) => {
 		controls.minPolarAngle = Math.PI / 6;
 		controls.enablePan = false;
 		controls.maxDistance = 30;
-
+		
 		//loader
 		loader.load(currentScene, (models) => {
 			// console.log(models);
@@ -186,7 +186,17 @@ const ModelLoader = (props) => {
 			};
 			setClock();
 
-			props.loadingOver();
+			//functions to run once loading is over
+			(() => {
+				props.loadingOver();
+
+				setTimeout(() => {
+					controls.autoRotate = true;
+					setTimeout(() => {
+						controls.autoRotate = false;
+					}, 7000);
+				}, 5000);
+			})();
 		});
 
 		function animate() {

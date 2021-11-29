@@ -32,7 +32,7 @@
 	left: 55%;
 	transform: translate(-50%, -50%) rotate(-15deg);
 	font-family: Kaushan;
-	font-size: 9rem;
+	font-size: 7rem;
 	letter-spacing: 3rem;
 	line-height: 14rem;
 	background-image: linear-gradient(to right, #4b0b67, #540e62);
@@ -108,4 +108,5 @@
 	margin: 1rem;
 	z-index: 6;
 	transform: skew(-25deg);
+	user-select: none;
 }

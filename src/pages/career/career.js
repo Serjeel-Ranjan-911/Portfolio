@@ -62,7 +62,7 @@ const Career = (props) => {
 
 
 					<VerticalTimelineElement
-						date="June 2021 - present"
+						date="June 2021 - Oct 2021"
 						contentStyle={{background: 'transparent' ,boxShadow: 'none',"padding":"2rem","color":"#fff","fontFamily":"OpenSansExtraBold","fontSize":"1.5rem","border":"3px solid rgb(255, 255, 255)","boxShadow":"0 1.5rem 2rem rgba(0, 0, 0, 0.575),\n\t\tinset 0 1.5rem 2rem rgba(0, 0, 0, 0.575)","textShadow":"0 2rem 1.5rem rgba(0, 0, 0, 0.575)","userSelect":"none","textAlign":"center"}}
 						iconStyle={{"width":"2rem","height":"2rem","marginLeft":"-10px","backgroundColor":"#ff206b","marginTop":"24px"}}
 						dateClassName={style.timelineDate}

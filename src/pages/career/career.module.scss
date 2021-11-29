@@ -42,7 +42,7 @@
 	transform: translate(-50%, -50%) rotate(-15deg);
 	font-family: Kaushan;
 	margin-top: 4.5rem;
-	font-size: 7.5rem;
+	font-size: 7rem;
 	letter-spacing: 3rem;
 	background-image: linear-gradient(to right, #4b0b67, #540e62);
 	background-clip: text;
@@ -69,6 +69,7 @@
 	z-index: 6;
 	transform: skew(-25deg);
 	text-align: center;
+	user-select: none;
 }
 
 ///////////////////////styles for timeline///////////////////
