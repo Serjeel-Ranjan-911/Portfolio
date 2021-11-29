@@ -1,0 +1,77 @@
+.hoverbutton {
+	z-index: 1000;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 10px;
+	width: 50px;
+	height: 50px;
+	border-radius: 100px;
+	background-color: #77118062;
+	position: absolute;
+	top: 0;
+	left: 0;
+	transition: all 0.2s;
+
+	&:hover {
+		border-radius: 0;
+		background-color: transparent;
+		padding: 13rem;
+		div {
+			transform: scale(1);
+		}
+		span{
+			display: none;
+		}
+	}
+}
+
+.icon{
+	font-family: OpenSansExtraBold;
+	color: #fff;
+	font-size: 2.5rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.button {
+	position: absolute;
+	transition: all 0.2s;
+	transform: scale(0);
+	background: linear-gradient(to right, #4b0b6760, #540e6262);
+	box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+	backdrop-filter: blur(3px);
+	border-radius: 5px;
+	border: 1px solid rgba(255, 255, 255, 0.18);
+	padding: 0.5rem;
+	font-family: LatoRegular;
+	font-size: 1.6rem;
+	color: #fff;
+	cursor: pointer;
+	user-select: none;
+	&:hover {
+		background: linear-gradient(to right, #4b0b67a2, #540e6293);
+		transform: scale(1.2) !important;
+	}
+}
+.button1 {
+	top: 20rem;
+	left: 0.5rem;
+}
+.button2 {
+	top: 18.32rem;
+	left: 8rem;
+}
+.button3 {
+	top: 14.14rem;
+	left: 14.14rem;
+}
+.button4 {
+	top: 8rem;
+	left: 18.32rem;
+}
+.button5 {
+	top: 0.5rem;
+	left: 20rem;
+}

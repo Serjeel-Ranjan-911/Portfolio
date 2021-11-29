@@ -6,6 +6,7 @@ import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 
 import ContentBox from '../ContentBox/ContentBox';
+import QuickHoverMenu from './QuickHoverMenu/QuickHoverMenu';
 
 import HoverTag from '../hoverTag/hoverTag';
 import NightScene from '../static/scenes/FullSceneMidNightBaked.glb';
@@ -273,6 +274,11 @@ const ModelLoader = (props) => {
 
 	return (
 		<>
+			<QuickHoverMenu clicked={(value) => {
+					if (pages.includes(value)) {
+						setRightComponent(value);
+					}
+				}}/>
 			<ContentBox
 				mobile={props.mobile}
 				rightComponent={rightComponent}

@@ -74,9 +74,9 @@ const cards = [
 			<h2>- Plus I have done some <div className="boldText" style={{fontSize: "3rem"}}>Freelance</div> Projects &#10142;  <a target="_blank"  rel="noopener noreferrer" href="https://eqixs.org/"><img style={{transform: "translate(0,10px)"}} className="skillLogo" src={eqixs} alt="Eqixs" /></a></h2>
 		</div>
 
-		<div className="textBox">
+		{/* <div className="textBox">
 			Currently at <a target="_blank"  rel="noopener noreferrer" href="https://proactaiconsulting.com/"  style={{textDecoration: "none"}} ><div className="boldText">ProAct AI</div> </a> <br />
-		</div>
+		</div> */}
 	</div>,
 	<div className="cardContentBox">
 		<span></span>
