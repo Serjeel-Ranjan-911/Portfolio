@@ -19,6 +19,7 @@ const pages = [
 	'Projects',
 	'ProblemSolving',
 	'Mug',
+	'Contact',
 ];
 const invisibleObjects = [
 	'Skills',
