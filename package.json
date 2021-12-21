@@ -6,6 +6,7 @@
     "@testing-library/jest-dom": "^5.13.0",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
+    "atropos": "^1.0.1",
     "dat.gui": "^0.7.7",
     "netlify-cli": "^4.4.4",
     "node-sass": "^6.0.0",

@@ -6,6 +6,7 @@ import Skills from '../pages/skills/skills';
 import Career from '../pages/career/career';
 import Coffee from '../pages/coffee/coffee';
 import Contact from '../pages/contact/contact';
+import Stickynote from '../pages/stickynote/stickynote';
 
 const ContentBox = (props) => {
 	const overlayRef = useRef(null);
@@ -41,6 +42,7 @@ const ContentBox = (props) => {
 			{currentSelect === 'Career' ? <Career mobile={props.mobile} /> : null}
 			{currentSelect === 'Mug' ? <Coffee mobile={props.mobile} /> : null}
 			{currentSelect === 'Contact' ? <Contact /> : null}
+			{currentSelect === 'StickyNote' ? <Stickynote />: null}
 		</div>
 	);
 };

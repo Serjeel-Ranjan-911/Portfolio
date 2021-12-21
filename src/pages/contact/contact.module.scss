@@ -63,7 +63,7 @@
 
 $phoneColor: #ff206a;
 $phoneBorder: #4b0b67;
-$phoneScreen: rgb(238, 229, 229);
+$phoneScreen: rgb(252, 218, 218);
 
 @keyframes rotating {
 	0% {
@@ -142,12 +142,13 @@ body {
 						}
 
 						img {
-              position: relative;
+							position: relative;
 							width: 50%;
 							height: 50%;
 							transition: all 0.2s;
 							border-radius: 1000px;
-              border: 3px solid #fff;
+							border: 3px solid rgb(241, 232, 232);
+							box-shadow: 0 2px 6px 3px rgba(0, 0, 0, 0.486);
 						}
 
 						p {

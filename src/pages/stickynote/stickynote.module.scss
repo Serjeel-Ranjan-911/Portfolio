@@ -1,0 +1,109 @@
+.wrapperFull {
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 1;
+	right: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	transition: all 2s;
+	overflow: hidden;
+	background-image: linear-gradient(to right, #4b0b67, #540e62);
+	border: 10px solid rgba(255, 7, 7, 0);
+}
+
+.main {
+	position: relative;
+	width: 95%;
+	height: 95%;
+	box-shadow: 0 0 10px #ff206b;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.hiddenText {
+	position: absolute;
+	top: 35%;
+	left: 40%;
+	transform: translate(-50%, -50%) rotate(-15deg);
+	font-family: Kaushan;
+	font-size: 9rem;
+	letter-spacing: 2.3rem;
+	line-height: 14rem;
+	background-image: linear-gradient(to right, #4b0b67, #540e62);
+	background-clip: text;
+	color: transparent;
+	user-select: none;
+}
+
+.bubble {
+	width: 20rem;
+	height: 20rem;
+	filter: blur(4rem);
+	background-image: radial-gradient(#ff206b, #a620ff);
+	border-radius: 100px;
+	position: absolute;
+}
+
+.title {
+	position: absolute;
+	top: 0;
+	font-family: 'Sacramento';
+	color: #ff206b;
+	font-size: 6rem;
+	letter-spacing: 0rem;
+	padding: 1rem;
+	margin: 1rem;
+	z-index: 6;
+	transform: skew(-25deg);
+	text-align: center;
+    user-select: none;
+}
+
+.atroposWindow {
+	height: 100%;
+	width: 100%;
+	position: relative;
+    overflow: visible !important;
+
+    .atroimg {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+    .quote{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%) !important;
+        color: #fff;
+        font-size: 2rem;
+        font-family: Kaushan;
+
+        .quoteName{
+            text-align: right;
+            color: #ff206b;
+            font-size: 2.5rem;
+            font-family: Sacramento;
+            font-weight: bold;
+        }
+
+        .quoteIcon{
+            z-index:-1;
+            position: absolute;
+            top: -10%;
+            left: -10%;
+            color: rgba(255, 59, 180, 0.541);
+            font-size: 10rem;
+        }
+    }
+
+}
