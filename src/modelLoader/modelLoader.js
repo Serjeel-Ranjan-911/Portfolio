@@ -11,6 +11,7 @@ import QuickHoverMenu from './QuickHoverMenu/QuickHoverMenu';
 import HoverTag from '../hoverTag/hoverTag';
 import NightScene from '../static/scenes/FullSceneMidNightBaked.glb';
 import MorningScene from '../static/scenes/FullSceneMorningBaked.glb';
+import EveningScene from '../static/scenes/FullSceneEveningBaked.glb'
 
 const pages = [
 	'Profile',
@@ -95,14 +96,19 @@ const ModelLoader = (props) => {
 		setDayTime(props.dayTime);
 		console.log('dayTime is = ' + dayTime);
 
-		//selecting corrent model
+		//selecting current model
 		if (props.dayTime === 0) {
 			setCurrentScene(MorningScene);
 			background = 0xb5b4ae;
 			tone = 1.3;
-		} else if (props.dayTime === 3) {
+		} else if (props.dayTime === 2) {
+			setCurrentScene(EveningScene);
+			background = 0x8F7E9B;
+			tone = 2;
+		}else if (props.dayTime === 3) {
 			setCurrentScene(NightScene);
 		}
+
 	}, [dayTime, props.dayTime]);
 
 	useEffect(() => {
