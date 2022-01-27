@@ -9,6 +9,7 @@ import Email from './img/gmail.png';
 import Twitter from './img/twitter.png';
 import Youtube from './img/youtube.png';
 import Github from './img/github.png';
+import BuyMeACoffee from './img/buymeacoffee.png';
 
 const calc = (x, y) => [x - window.innerWidth / 2, y - window.innerHeight / 2];
 const trans1 = (x, y) => `translate3d(${x / 40}px,${y / 40}px,0)`;
@@ -111,6 +112,16 @@ const Contact = (props) => {
 								>
 									<img src={Github} alt="github" />
 									<p>Github</p>
+								</a>
+
+								<a
+									target="_blank"
+									href="https://www.buymeacoffee.com/SerjeelRanjan"
+									className={style.appIcon}
+									rel="noreferrer"
+								>
+									<img src={BuyMeACoffee} alt="BuyMeACoffee" />
+									<p>Buy me a coffee</p>
 								</a>
 							</div>
 						</div>
