@@ -9,9 +9,11 @@ import ContentBox from '../ContentBox/ContentBox';
 import QuickHoverMenu from './QuickHoverMenu/QuickHoverMenu';
 
 import HoverTag from '../hoverTag/hoverTag';
+
 import NightScene from '../static/scenes/FullSceneMidNightBaked.glb';
 import MorningScene from '../static/scenes/FullSceneMorningBaked.glb';
-import EveningScene from '../static/scenes/FullSceneEveningBaked.glb'
+import EveningScene from '../static/scenes/FullSceneEveningBaked.glb';
+import AfternoonScene from '../static/scenes/FullSceneAfternoonBaked.glb';
 
 const pages = [
 	'Profile',
@@ -96,19 +98,22 @@ const ModelLoader = (props) => {
 		setDayTime(props.dayTime);
 		console.log('dayTime is = ' + dayTime);
 
-		//selecting current model
+		// selecting current model
 		if (props.dayTime === 0) {
 			setCurrentScene(MorningScene);
 			background = 0xb5b4ae;
 			tone = 1.3;
+		} else if (props.dayTime === 1) {
+			setCurrentScene(AfternoonScene);
+			background = 0xbab5ae;
+			tone = 1.5;
 		} else if (props.dayTime === 2) {
 			setCurrentScene(EveningScene);
-			background = 0x8F7E9B;
+			background = 0x8f7e9b;
 			tone = 2;
-		}else if (props.dayTime === 3) {
+		} else if (props.dayTime === 3) {
 			setCurrentScene(NightScene);
 		}
-
 	}, [dayTime, props.dayTime]);
 
 	useEffect(() => {
@@ -158,7 +163,7 @@ const ModelLoader = (props) => {
 		controls.minPolarAngle = Math.PI / 6;
 		controls.enablePan = false;
 		controls.maxDistance = 30;
-		
+
 		//loader
 		loader.load(currentScene, (models) => {
 			// console.log(models);
@@ -282,11 +287,13 @@ const ModelLoader = (props) => {
 
 	return (
 		<>
-			<QuickHoverMenu clicked={(value) => {
+			<QuickHoverMenu
+				clicked={(value) => {
 					if (pages.includes(value)) {
 						setRightComponent(value);
 					}
-				}}/>
+				}}
+			/>
 			<ContentBox
 				mobile={props.mobile}
 				rightComponent={rightComponent}
