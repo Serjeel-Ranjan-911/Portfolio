@@ -52,7 +52,7 @@ const cards = [
 				<img className="skillLogo" src={gmail} alt="gmail" />
 				<h2 style={{marginLeft:"1rem"}}>Gmail</h2>
 			</div>
-			<div style={{display: "flex", justifyContent: "flex-start", alignItems: "center",margin: "3rem"}} onClick={()=>window.open('https://linkedin.com/in/serjeel-ranjan-0331b31ab', '_blank')}>
+			<div style={{display: "flex", justifyContent: "flex-start", alignItems: "center",margin: "3rem"}} onClick={()=>window.open('https://linkedin.com/in/serjeel-ranjan', '_blank')}>
 				<img className="skillLogo" src={linkedin} alt="linkedin" />
 				<h2 style={{marginLeft:"1rem"}}>LinkedIn</h2>
 			</div>

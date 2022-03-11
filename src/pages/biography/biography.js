@@ -122,7 +122,7 @@ const Biography = (props) => {
 					<div className={style.square} onClick={()=>window.open("https://mail.google.com/mail/?view=cm&fs=1&to=serjeelranjan@gmail.com&su=SUBJECT&body=BODY&bcc=serjeelranjan@gmail")}>
 						<img src={gmail} alt="gmail" />
 					</div>
-					<div className={style.square} onClick={()=>window.open('https://linkedin.com/in/serjeel-ranjan-0331b31ab', '_blank')}>
+					<div className={style.square} onClick={()=>window.open('https://linkedin.com/in/serjeel-ranjan', '_blank')}>
 						<img src={linkedin} alt="linkedin" />
 					</div>
 				</div>

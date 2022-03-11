@@ -68,7 +68,7 @@ function App() {
 
 			console.log('%c Hello Fellow Tech Developer', style);
 			console.log(
-				'%c If you like my work we can connect at LinkedIn -> https://www.linkedin.com/in/serjeel-ranjan-0331b31ab/',
+				'%c If you like my work we can connect at LinkedIn -> https://www.linkedin.com/in/serjeel-ranjan/',
 				`
 				font-size: 16px;
 				color: #ebd834;
