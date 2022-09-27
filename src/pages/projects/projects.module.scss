@@ -1,0 +1,146 @@
+.wrapperFull {
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 1;
+	right: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	transition: all 2s;
+	overflow: hidden;
+	background-image: linear-gradient(to right, #4b0b67, #540e62);
+	border: 10px solid rgba(255, 7, 7, 0);
+}
+
+.main {
+	position: relative;
+	width: 95%;
+	height: 95%;
+	box-shadow: 0 0 10px #ff206b;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.hiddenText {
+	position: absolute;
+	top: 20%;
+	left: 55%;
+	transform: translate(-50%, -50%) rotate(-15deg);
+	font-family: Kaushan;
+	font-size: 7rem;
+	letter-spacing: 3rem;
+	line-height: 14rem;
+	background-image: linear-gradient(to right, #4b0b67, #540e62);
+	background-clip: text;
+	color: transparent;
+	user-select: none;
+}
+
+.bubble {
+	width: 20rem;
+	height: 20rem;
+	filter: blur(4rem);
+	background-image: radial-gradient(#ff206b, #a620ff);
+	border-radius: 100px;
+	position: absolute;
+}
+
+.title {
+	font-family: 'Sacramento';
+	color: #ff206b;
+	font-size: 6rem;
+	letter-spacing: 0rem;
+	padding: 1rem;
+	margin: 1rem;
+	z-index: 6;
+	transform: skew(-25deg);
+	text-align: center;
+	user-select: none;
+}
+
+.contentBox {
+	width: 100%;
+	height: 80%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	z-index: 6;
+}
+
+///////////////////////////coffee mug///////////////////////////////
+
+.mug {
+	width: 50%;
+	height: auto;
+    position: relative;
+}
+
+.mugPhoto{
+    filter: drop-shadow(0 1.5rem 2rem rgba(0, 0, 0, 0.719));
+}
+
+.coffeeQuote{
+    padding: 4rem;
+	color: #ff206b;
+	font-family: OpenSansExtraBold;
+	font-size: 2rem;
+	letter-spacing: .2rem;
+    text-align: center;
+}
+
+.wrap {
+    position: absolute;
+    left: 3%;
+}
+
+.steam {
+	position: absolute;
+	width: 200px;
+	height: 50px;
+	background-color: rgb(255, 255, 255);
+	border-radius: 50%;
+	z-index: 0;
+	opacity: 0;
+
+	filter: blur(4rem);
+	background-image: radial-gradient(rgb(255, 255, 255), rgb(255, 255, 255));
+	border-radius: 100px;
+}
+.steam-one {
+	animation: steam-one 4s ease-out infinite;
+}
+.steam-three {
+	animation: steam-one 4s ease-out 1s infinite;
+}
+@keyframes steam-one {
+	0% {
+		transform: translateY(0) translateX(0) scale(0.25);
+		opacity: 0.25;
+	}
+	100% {
+		transform: translateY(-200px) translateX(20px) scale(1);
+		opacity: 0;
+	}
+}
+.steam-two {
+	animation: steam-two 4s ease-out 0.5s infinite;
+}
+.steam-four {
+	animation: steam-two 4s ease-out 1.5s infinite;
+}
+@keyframes steam-two {
+	0% {
+		transform: translateY(0) translateX(0) scale(0.25);
+		opacity: 0.25;
+	}
+	100% {
+		transform: translateY(-200px) translateX(-20px) scale(1);
+		opacity: 0;
+	}
+}

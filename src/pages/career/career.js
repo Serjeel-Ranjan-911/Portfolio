@@ -17,6 +17,36 @@ const trans3 = (x, y) =>
 	`translate3d(${x / 50 - 250}px,${y / 50 - 100}px,0) rotate(-15deg)`;
 const trans4 = (x, y) => `translate3d(${x / 20}px,${y / 20}px,0)`;
 
+const TimelineElement = ({ title, role, date }) => (
+	<VerticalTimelineElement
+		date={date}
+		contentStyle={{
+			background: 'transparent',
+			padding: '2rem',
+			color: '#fff',
+			fontFamily: 'OpenSansExtraBold',
+			fontSize: '1.5rem',
+			border: '3px solid rgb(255, 255, 255)',
+			boxShadow:
+				'0 1.5rem 2rem rgba(0, 0, 0, 0.575),\n\t\tinset 0 1.5rem 2rem rgba(0, 0, 0, 0.575)',
+			textShadow: '0 2rem 1.5rem rgba(0, 0, 0, 0.575)',
+			userSelect: 'none',
+			textAlign: 'center',
+		}}
+		iconStyle={{
+			width: '2rem',
+			height: '2rem',
+			marginLeft: '-10px',
+			backgroundColor: '#ff206b',
+			marginTop: '24px',
+		}}
+		dateClassName={style.timelineDate}
+	>
+		<h3 className={style.timelineHeading}>{title}</h3>
+		<p className={style.timelineText}>{role}</p>
+	</VerticalTimelineElement>
+);
+
 const Career = (props) => {
 	const { clientX, clientY } = useMousePosition();
 	const [config, setConfig] = useSpring(() => ({
@@ -58,29 +88,30 @@ const Career = (props) => {
 					My career timeline
 				</animated.h1>
 
-				<VerticalTimeline >
+				<VerticalTimeline>
+					<TimelineElement
+						date="September 2022 - Present"
+						title="Brisk"
+						role="Frontend Developer Intern"
+					/>
 
+					<TimelineElement
+						date="March 2022 - July 2022"
+						title="Janus Softwares"
+						role="ReactJS Developer Intern"
+					/>
 
-					<VerticalTimelineElement
+					<TimelineElement
 						date="June 2021 - Oct 2021"
-						contentStyle={{background: 'transparent' ,boxShadow: 'none',"padding":"2rem","color":"#fff","fontFamily":"OpenSansExtraBold","fontSize":"1.5rem","border":"3px solid rgb(255, 255, 255)","boxShadow":"0 1.5rem 2rem rgba(0, 0, 0, 0.575),\n\t\tinset 0 1.5rem 2rem rgba(0, 0, 0, 0.575)","textShadow":"0 2rem 1.5rem rgba(0, 0, 0, 0.575)","userSelect":"none","textAlign":"center"}}
-						iconStyle={{"width":"2rem","height":"2rem","marginLeft":"-10px","backgroundColor":"#ff206b","marginTop":"24px"}}
-						dateClassName={style.timelineDate}
-					>
-						<h3 className={style.timelineHeading}>ProActAI</h3>
-						<p className={style.timelineText}>Full Stack web developer</p>
-					</VerticalTimelineElement>
+						title="ProActAI"
+						role="Full Stack web developer"
+					/>
 
-					<VerticalTimelineElement
+					<TimelineElement
 						date="October 2020 - April 2021"
-						contentStyle={{background: 'transparent' ,boxShadow: 'none',"padding":"2rem","color":"#fff","fontFamily":"OpenSansExtraBold","fontSize":"1.5rem","border":"3px solid rgb(255, 255, 255)","boxShadow":"0 1.5rem 2rem rgba(0, 0, 0, 0.575),\n\t\tinset 0 1.5rem 2rem rgba(0, 0, 0, 0.575)","textShadow":"0 2rem 1.5rem rgba(0, 0, 0, 0.575)","userSelect":"none","textAlign":"center"}}
-						iconStyle={{"width":"2rem","height":"2rem","marginLeft":"-10px","backgroundColor":"#ff206b","marginTop":"24px"}}
-						dateClassName={style.timelineDate}
-					>
-						<h3 className={style.timelineHeading}>Vedanth Industrial Zone</h3>
-						<p className={style.timelineText}>WordPress developer, Content Writer, SEO developer</p>
-					</VerticalTimelineElement>
-
+						title="Vedanth Industrial Zone"
+						role="WordPress developer, Content Writer, SEO developer"
+					/>
 				</VerticalTimeline>
 			</main>
 		</div>

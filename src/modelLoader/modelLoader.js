@@ -7,6 +7,7 @@ import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 
 import ContentBox from '../ContentBox/ContentBox';
 import QuickHoverMenu from './QuickHoverMenu/QuickHoverMenu';
+import DoggoMenu from "./DoggoMenu/DoggoMenu";
 
 import HoverTag from '../hoverTag/hoverTag';
 
@@ -294,6 +295,7 @@ const ModelLoader = (props) => {
 					}
 				}}
 			/>
+			<DoggoMenu dayTime={dayTime} />
 			<ContentBox
 				mobile={props.mobile}
 				rightComponent={rightComponent}

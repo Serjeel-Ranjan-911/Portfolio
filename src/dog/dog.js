@@ -6,11 +6,16 @@ function sleep(ms) {
 }
 
 const messages = [
-	'I welcome you to Serjeel\'s Den',
-	['Glad to see you work hard early in the morning','Wishing you a splendid afternoon','Wising for a Great Evening','Hope you are having fun working in night'],
+	"I welcome you to Serjeel's Den",
+	[
+		'Glad to see you work hard early in the morning',
+		'Wishing you a splendid afternoon',
+		'Wising for a Great Evening',
+		'Hope you are having fun working in night',
+	],
 	'This is an interactive portfolio </br>and a cool place to explore',
 	'Click on the items on the shelf which </br>interests you  and know more',
-	"Enjoy your stay here"
+	'Enjoy your stay here',
 ];
 
 const Dog = (props) => {
@@ -23,18 +28,22 @@ const Dog = (props) => {
 
 	const exit = () => {
 		dog.current.style.transform = 'scale(0) translate(-80%,24%)';
-		setTimeout(()=>dog.current.style.display="none",1000);
+		setTimeout(() => {
+			dog.current.style.display = 'none';
+			props?.removeDog?.call();
+		}, 1000);
 	};
 
 	const changeMessage = async (index) => {
-		messageBox.current.style.transform = 'scale(0)';
-		await sleep(500);
-		if(index === 1)
-		messageBox.current.innerHTML = messages[index][props.dayTime];
-		else
-		messageBox.current.innerHTML = messages[index];
-		await sleep(500);
-		messageBox.current.style.transform = 'scale(-1,1)';
+		if (messageBox.current) {
+			messageBox.current.style.transform = 'scale(0)';
+			await sleep(500);
+			if (index === 1)
+				messageBox.current.innerHTML = messages[index][props.dayTime];
+			else messageBox.current.innerHTML = messages[index];
+			await sleep(500);
+			messageBox.current.style.transform = 'scale(-1,1)';
+		}
 	};
 
 	useEffect(() => {

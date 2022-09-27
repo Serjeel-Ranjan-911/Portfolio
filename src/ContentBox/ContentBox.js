@@ -4,6 +4,7 @@ import style from './ContentBox.module.scss';
 import Biography from '../pages/biography/biography';
 import Skills from '../pages/skills/skills';
 import Career from '../pages/career/career';
+import Projects from '../pages/projects/projects';
 import Coffee from '../pages/coffee/coffee';
 import Contact from '../pages/contact/contact';
 import Stickynote from '../pages/stickynote/stickynote';
@@ -40,9 +41,10 @@ const ContentBox = (props) => {
 			{currentSelect === 'Profile' ? <Biography mobile={props.mobile} /> : null}
 			{currentSelect === 'Skills' ? <Skills mobile={props.mobile} /> : null}
 			{currentSelect === 'Career' ? <Career mobile={props.mobile} /> : null}
+			{currentSelect === 'Projects' ? <Projects mobile={props.mobile} /> : null}
 			{currentSelect === 'Mug' ? <Coffee mobile={props.mobile} /> : null}
 			{currentSelect === 'Contact' ? <Contact /> : null}
-			{currentSelect === 'StickyNote' ? <Stickynote />: null}
+			{currentSelect === 'StickyNote' ? <Stickynote /> : null}
 		</div>
 	);
 };
